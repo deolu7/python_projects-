@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Amazon Rating Dashbord</title>
+ <meta name="description" content="Page Description Goes Here">
+ <link href="https://fonts.googleapis.com/css2?family=Roboto, sans-serif display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ <header>
+  <div class="logo">
+   <a href="index.html"><img src="Amazon-Logo.png" /></a>
+  </div>
+  <div class="header-text1">
+   <h1>Amazon Ratings Dashboard</h1>
+   <p>Discover insights into user ratings and engagement across Amazon categories.</p>
+  </div>
+ </header>
+
+ <div class="header-text">
+  <h2>Overview</h2>
+  <p>How do user ratings reflect customer behavior and influence product performance on Amazon?
+  <br>To answer this, I analyzed data on product ratings across various categories. By exploring patterns in user engagement and behavior, I connected these insights to design decisions that can improve Amazon's product pages and customer experience.</br>
+  </p>
+ </div>
+
+ <section class="about-background">
+  <div class="flex-box">
+   <div class="box">
+    <h2>Data Source</h2>
+    <p>Data was sourced from a dataset repository collected at the University of California, San Diego (UCSD) laboratory by Julian McAuley.</p>
+    <a href="https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023#load-item-metadata" target="_blank" rel="noopener noreferrer">Link here</a> 
+   </div>
+   <div class="box">
+    <h2>Data Quality</h2>
+    <ul>
+     <li>Missing units removed</li>
+     <li>Columns containing empty observations dropped</li>
+    </ul>
+   </div>
+   <div class="box">
+    <h2>Structure</h2>
+    <ul>
+     <li>Used plotly to create interaction graphs and used tooltips for better user engagement</li>
+     <li>Used Amazon inspiried colors for visual representation.</li>
+     <li>Key metrics used: average ratings(mean value of ratings withing each category), number of ratings(sum of all ratings in each category), main categories.</li>
+     <li>Use of categorical bins created for analysis (e.g Low, Medium, High ratings) for easier interpretation
+     </li>
+     <li>Removed categories that have very few ratings (less than 10) to focus only on the categories with enough feedback to provide useful insights.
+     </li>
+    </ul>
+   </div>
+  </div>
+ </section>
+
+ <section>
+  <div class="graph">
+   <h2>Boxplot and scatter plot showing the different categories by Average Rating and Rating Number</h2>
+
+   <div class="graph1">
+    <div>
+     <div><iframe src="fig1.html"></iframe></div>
+     <p>FIG 1: This shows the average ratings across various Amazon product categories. This shows trend in customer satisfaction. Categories like 'Gift Cards' and 'Amazon Fashion' show high ratings, indicating they meet user expectations effectively. While categories such as 'Appstore for Android' and 'Software' show broader ratings, suggesting mixed customer experiences within these categories. This could be as a result of differences in product quality or customer expectations.
+     These insights can help in improving product layout or descriptions. Categories with lower or more broader ratings may benefit from enhanced product quality controls or clearer information presentation to increase user satisfaction.</p>
+    </div>
+
+    <div>
+     <div><iframe src="fig2.html"></iframe></div>
+     <p>FIG 2: This shows the number of ratings across various categories. It reveals customer engagement levels. The 'Appstore for Android' category has a significantly higher number of ratings, suggesting its widespread use and high engagement compared to other categories. While categories like 'Books' and 'Home Audio & Theater' show much fewer ratings, indicating lower customer interaction.
+     This will help prioritize categories with high user interaction for design enhancements and improve user experiences. While categories with less engagements could use strategies such as promotions or improving the process by which the product is discovered.</p>
+    </div>
+   </div>
+  </div>
+  
+  <div class="graph">
+   <h2>Heatmap Showing Average Ratings by Category</h2>
+   <iframe src="fig6.html"></iframe>
+   <p>FIG 3:This shows the distribution of ratings across Amazon product categories. 'Appstore for Android' and 'Software' have the highest number of ratings, indicating high user interaction but it also show that their average rating is medium. While categories like 'Gift Cards' have fewer ratings but maintain high satisfaction. High-engagement categories could need continuous improvement, while low-engagement ones may benefit from targeted marketing or quality enhancements to boost visibility and satisfaction.</p> 
+  </div>
+  
+  <div class="graph">
+   <h2>Count of Category by Average Rating and Rating Number</h2>
+   <div class="graph1">
+    <div>
+     <div><iframe src="fig7.html"></iframe></div>
+     <p>FIG 4: This shows the number of ratings across various Amazon product categories, which is segmented by average rating levels (low, medium, high). 'Software' and 'Appstore for Android' stand out with the highest number of ratings, especially in the medium range. This indicates a high user engagement but mixed satisfaction while categories like 'Gift Cards'show very low rating counts, reflecting little interaction. 
+     </p>
+    </div>
+ 
+    <div>
+     <div><iframe src="fig8.html"></iframe></div>
+     <p>FIG 5: This shows the distribution of ratings across Amazon product categories, grouped by rating levels (Few, Moderate, High, Very High). 'Software' and 'Appstore for Android' have the highest number of ratings, particularly in the Few and Moderate groups, indicating significant user engagement with mixed rating volumes. 'Home Audio & Theater' and 'Gift Cards' also show low overall rating counts</p>
+    </div>
+   </div>
+
+  </div>
+ </section>
+
+ <footer>
+  <p>&copy; 2024 Amazon Data Analysis | Created by Joy Ogunpolu</p>
+ </footer>
+
+</body>
+
